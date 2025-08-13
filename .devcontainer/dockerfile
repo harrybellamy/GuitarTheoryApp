@@ -1,0 +1,10 @@
+# Use the official Node.js 18 image
+FROM node:18
+
+# Set up user and working directory
+WORKDIR /workspace
+
+# Install additional tools if needed (uncomment if you use git or curl)
+# RUN apt-get update && apt-get install -y git curl
+
+USER node

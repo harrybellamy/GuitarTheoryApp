@@ -1,0 +1,25 @@
+{
+  "name": "React Guitar App Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "forwardPorts": [
+    5173
+  ], // Vite default
+  "postCreateCommand": "npm install",
+  "remoteUser": "node",
+  "mounts": [
+    "type=volume,source=${localWorkspaceFolder}/guitar-node-modules,target=/workspace/node_modules,type=bind,consistency=cached"
+  ]
+}
