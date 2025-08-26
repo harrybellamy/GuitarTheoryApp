@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ChordsAndKeysPage from "./pages/ChordsAndKeys";
 import ScalesPage from "./pages/Scales";
-// Import other pages here
+import ChordsPage from "./pages/Chords";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path="/scales" element={<ScalesPage/>} />
         <Route path="/chordsAndKeys" element={<ChordsAndKeysPage/>} />
         <Route path="/triads" element={<div>Triads Page</div>} />
+        <Route path="/chords" element={<ChordsPage/>} />
       </Routes>
     </Router>
   );

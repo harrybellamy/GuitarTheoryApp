@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CircleOfFifths from "@/components/CircleOfFifths";
+import CircleOfFifths from "../components/CircleOfFifths";
 import ChordsInKey from "../components/ChordsInKey";
 
 export default function ChordsAndKeysPage() {

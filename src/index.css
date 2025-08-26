@@ -8,6 +8,20 @@
   --color-light: #F1F5F9;
 }
 
+@layer components {
+  table {
+    @apply w-full text-left border-collapse;
+  }
+
+  table tbody tr {
+    @apply transition;
+  }
+
+  table tbody tr:hover {
+    @apply bg-accent/20 text-accent;
+  }
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

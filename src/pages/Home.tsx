@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Music, Guitar, BookOpenCheck, Circle } from "lucide-react";
+import { Music, Piano, BookOpenCheck, Circle } from "lucide-react";
 
 export default function Home() {
   return (
@@ -12,6 +12,7 @@ export default function Home() {
         <Tile title="Scales" icon={<Music />} link="/scales" />
         <Tile title="Chords and Key Signatures" icon={<Circle />} link="/chordsAndKeys" />
         <Tile title="Triads" icon={<BookOpenCheck />} link="/triads" />
+        <Tile title="Chords" icon={<Piano />} link="/chords" />
       </div>
     </div>
   );

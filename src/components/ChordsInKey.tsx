@@ -53,7 +53,7 @@ export default function ChordsInKey({ keyName }: Props) {
         </thead>
         <tbody>
           {chords.map(({ degree, chordName, quality }) => (
-            <tr key={degree} className="border-b hover:bg-gray-50 cursor-default">
+            <tr key={degree} className="cursor-default">
               <td className="py-2 font-mono">{degree}</td>
               <td className="py-2 font-semibold">{chordName}</td>
               <td className="py-2 capitalize">{quality}</td>
