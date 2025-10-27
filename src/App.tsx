@@ -3,17 +3,18 @@ import Home from "./pages/Home";
 import ChordsAndKeysPage from "./pages/ChordsAndKeys";
 import ScalesPage from "./pages/Scales";
 import ChordsPage from "./pages/Chords";
+import Layout from "./layouts/Layout";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        {/* Add your other routes */}
-        <Route path="/scales" element={<ScalesPage/>} />
-        <Route path="/chordsAndKeys" element={<ChordsAndKeysPage/>} />
-        <Route path="/triads" element={<div>Triads Page</div>} />
-        <Route path="/chords" element={<ChordsPage/>} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/scales" element={<ScalesPage />} />
+          <Route path="/chords-and-keys" element={<ChordsAndKeysPage />} />
+          <Route path="/chords" element={<ChordsPage />} />
+        </Route>
       </Routes>
     </Router>
   );

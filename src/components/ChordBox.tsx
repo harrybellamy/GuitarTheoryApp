@@ -6,6 +6,18 @@ type ChordBoxProps = {
   onPlay: (notes: string[]) => void;
 };
 
+const getFullChordName = (chordData: ReturnType<typeof Chord.get>) => {
+  const chordType = chordData.type === "major" 
+    ? "Major"
+    : chordData.type === "minor"
+    ? "Minor"
+    : chordData.type;
+    
+  const seventh = chordData.intervals.length > 3 && chordData.type.includes("7") ? "7" : "";
+  
+  return `${chordData.tonic} ${chordType} ${seventh}`.trim();
+};
+
 export default function ChordBox({ chordName, onPlay }: ChordBoxProps) {
   const chordData = Chord.get(chordName);
 
@@ -25,7 +37,12 @@ export default function ChordBox({ chordName, onPlay }: ChordBoxProps) {
   return (
     <div className="p-4 bg-surface text-ink rounded-xl shadow-md w-64 flex flex-col gap-2">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-bold text-accent">{chordData.symbol}</h2>
+        <h2 
+          className="text-xl font-bold text-accent cursor-help"
+          title={getFullChordName(chordData)}
+        >
+          {chordData.symbol}
+        </h2>
         <button
           onClick={() => onPlay(notes)}
           className="p-2 rounded-full bg-accent/20 hover:bg-accent/40 transition"
