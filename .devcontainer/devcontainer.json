@@ -1,7 +1,7 @@
 {
   "name": "React Guitar App Dev",
   "build": {
-    "dockerfile": "Dockerfile"
+    "dockerfile": "dockerfile"
   },
   "customizations": {
     "vscode": {
